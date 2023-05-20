@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>The Anti-Depressant</title>
+</head>
+<body style="background-color:black;color:aliceblue;">
+    <h1>The Anti-Depressant!!</h1>
+    <h2>A comedy/mental health page for those in need! Bringing light to a dim world!</h2>
+    <div class="main">
+        <div class="left">
+            {% for message in get_flashed_messages() %}
+                <p style="color:red">{{message}}</p>
+            {% endfor %}
+            <h3>Whoa Hold Up Now!! Gotta Be Registered To Tell Jokes Around Here!</h3>
+            <form action="/create_newbie" method="POST">
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First Name:</label>
+                    <input type="text" class="form-control" id="exampleInputfname" name="first_name">
+                </div>
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control" id="exampleInputlname" name="last_name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    <div id="emailHelp" class="form-text" style="color:aliceblue">Email must be in proper email format</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    <div id="password" class="form-text" style="color: aliceblue;">Password must be at least 8 characters</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password" class="form-label">Confirm Password:</label>
+                    <input type="password" class="form-control" id="exampleconfirm_password" name="confirm_password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="right">
+            <h3>Do We Know You? Log In to See!</h3>
+            <form action="/logging_in" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    <div id="emailHelp" class="form-text" style="color:aliceblue">Email must be in proper email format</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    <div id="password" class="form-text" style="color:aliceblue">Password must be at least 8 characters</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

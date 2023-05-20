@@ -1,0 +1,1 @@
+SELECT * FROM posts JOIN users ON users.id = posts.users_id ORDER BY posts.created_at DESC

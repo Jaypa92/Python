@@ -1,0 +1,139 @@
+#display{
+    width: 375px;
+    height: 211px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
+body {
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.title{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 100px;
+    justify-content: space-between;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10px;
+    background-color: black;
+    color: red;
+    padding: 0px 20px;
+    position: sticky; top: 0px;
+}
+.mission{
+    width: 40%;
+    color: aliceblue;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+.links button{
+    background-color: red;
+    height: 30px;
+    font-size: 15px;
+    color: black;
+    /* border-radius: 15%; */
+}
+.links a{
+    text-decoration: none;
+    color: white;
+}
+.main h1{
+    font-size: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 50%;
+    color: white;
+}
+span{
+    color: yellow;
+}
+.user-post{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+}
+label{
+    font-size: 30px;
+    color:dodgerblue;
+}
+form{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    gap: 20px;
+}
+.post_area button{
+    display: block;
+    margin-top: 20px;
+}
+img{
+    width: 20%;
+    background: none;
+}
+p{
+    text-align: center;
+}
+.user_feed{
+    border-radius: 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+h4{
+    text-align: center;
+    height: 100px;
+}
+.feed_post{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.user_feed p{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: white;
+}
+.user_feed h3{
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 100px;
+    color: black;
+}
+.user_feed a{
+    color:black
+}
+.feed_post img{
+    background: none;
+    height: 40px;
+    width: 55px;
+    padding-left: 20px;
+    margin-top: 20px;
+}

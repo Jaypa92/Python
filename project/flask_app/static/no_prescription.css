@@ -1,0 +1,13 @@
+body{
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+h1{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
