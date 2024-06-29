@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <style>
+        body{
+            background-color:black;
+            color: white;
+
+        }
+        .box{
+            /* background-color: gray; */
+            width: 50%;
+            height: 500px;
+            margin: 0 auto;
+        }
+        h1{
+            text-decoration-line: underline;
+            text-align: center;
+        }
+        .main{
+            margin: 0 auto;
+            width: 70%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+        }
+        .info{
+            display:flex;
+            justify-content:center;
+            gap: 50px;
+            padding-left: 50px;
+            margin-bottom: 40px;
+        }
+        button{
+            color: white;
+            background-color: cornflowerblue;
+            height: 30px;
+            width: 70px;
+            
+        }
+        a{
+            text-decoration-line: none;
+            color:white;
+            margin-left: 200px;
+            padding: 15px 25px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <h1>Submitted Info</h1>
+            <div class="info">
+                <div class="types">
+                    <p>Name: {{session["name"]}}</p>
+                    <p>Dojo Location: {{session["place"]}}</p>
+                    <p>Favorite Language: {{session["lang"]}}</p>
+                    <p>Comment: {{session["user-comments"]}}</p>
+                </div>
+            </div>
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

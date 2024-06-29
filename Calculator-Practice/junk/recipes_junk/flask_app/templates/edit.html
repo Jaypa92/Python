@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="head">
+        <h1>Edit Recipe!</h1>
+        <div class="links1">
+            <a href="">Back to Recipes</a>
+            <a href="">Logout</a>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="form1">
+            <form action="/" method="POST">
+                <div class="field">
+                    <label for="recipe-name">Name: </label>
+                    <input type="text" name="recipe-name" value="">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="description">Description: </label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+                <br>
+                <div class="field">
+                    <label for="instructions">Instructions: </label>
+                    <textarea name="instructions" id="instructions" cols="30" rows="10"></textarea>
+                </div>
+                <br>
+                <div class="field">
+                    <label for="when">Date Cooked/Made: </label>
+                    <input type="date" name="when" value="">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="time">Under 30 Min.?</label>
+                    <input type="radio" name="under_thirty" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="under_thirty" value="no">
+                    <label for="no">No</label>
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+}
+.head{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 260px;
+    width: 80%;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+h6{
+    text-align: center;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+.alert{
+    margin: auto;
+    width: 70%;
+    background-color: gray !important;
+    border: 2px solid black !important;
+    margin-top: -120px;
+}
+h4{
+    text-align: center;
+}
+.alert button{
+    display: flex; 
+    margin: auto;
+}

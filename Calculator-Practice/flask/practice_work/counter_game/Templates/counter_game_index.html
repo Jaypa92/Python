@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='counter_game_style.css') }}">
+    <title>The Great Number Game</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Welcome to the Great Number Game</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!!</p>
+        {%if "guess" in session%}
+            {%if session["guess"] == session["num"]%}
+                <div class="green">
+                    <h2>You Got It!!</h2>
+                    <p class="attempt">Attempts: {{session["count"]}} </p>
+                </div>
+                {% elif session["guess"] < session["num"] %}
+                    <div class="red">
+                        <h2>Too Low!!!</h2>
+                    </div>
+                {%else%}               
+                    <div class="red">
+                        <h2>Too High!!</h2>
+                    </div>
+            {%endif%}
+        {%endif%}
+        <form action="/process" method="post">
+            <input type="text" name="guess">
+            <br>
+            <input type="submit" value="Submit" class="submitting">
+            <a href="/restart" class = submitting>Reset</a>
+        </form>
+    </div>  
+                
+</body>
+</html>

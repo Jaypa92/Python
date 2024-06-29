@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .main{
+            margin: 0 auto;
+            width: 70%;
+            height:600px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .box{
+            /* background-color: gray; */
+            /* width: 40%; */
+            height: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        label, input{
+            margin-bottom: 20px;
+        }
+        select{
+            margin-bottom: 20px;
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            margin-top: 20px;
+            background-color:cornflowerblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <h1>Dojo Survey</h1>
+            <form action="/process" method="post">
+                <label>Your Name:</label>
+                <input type="text" name="name">
+                <br>
+                <label for="location">Dojo Location</label>
+                <select name="place" id="location">
+                    <option value="location">Please Choose an Option</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+                <br>
+                <label>Favorite Language:</label>
+                <select name="language" id="language">
+                    <option value="lang">Please Choose A Language</option>
+                    <option value="Python">Python</option>                   
+                </select>
+                <br>
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

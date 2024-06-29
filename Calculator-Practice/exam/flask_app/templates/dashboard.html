@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealz</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>>
+</head>
+<body>
+    <div class="main2">
+        <div class="header">
+            <h1>Welcome to Car Dealz, {{session['first_name']}}!!!</h1>
+            <button><a href="/logout">Logout</a></button>
+        </div>
+        <h2>Cars For Sale</h2>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th class="small">Year</th>
+                <th>Seller</th>
+                <th>Actions</th>
+            </tr>
+            {% for car in cars %}
+            <tr>
+                <td>{{car.model}}</td>
+                <td class="small">{{car.year}}</td>
+                <td>{{car.user.first_name}} {{car.user.last_name}}</td>
+                {% if car.user.id == session['uid'] %}
+                <td><a href="/edit_car/{{car.id}}">Edit</a>
+                    <a href="/delete_car/{{car.id}}">Delete</a>
+                {% endif %}
+                {% if car.user.id != session['uid'] %}
+                    <td><a href="/view/{{car.id}}">View</a></td>
+                {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button><a href="/create">Add Car</a></button>
+    </div>
+</body>
+</html>

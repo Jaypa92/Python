@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Recipe Share</h1>
+    {% for message in get_flashed_messages() %}
+        <p style="color:red">{{message}}</p>
+    {% endfor %}
+    <div class="main">
+        <div class="left">
+            <h2>Register</h2>
+            <form class="form" action="/register" method="POST">
+                <div class="field">
+                    <label for="first_name">First Name: </label>
+                    <input type="text" name="first_name">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="last_name">Last Name: </label>
+                    <input type="text" name="last_name">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="email">Email: </label>
+                    <input type="text" name="email">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="confirm_pw">Confirm Password: </label>
+                    <input type="password" name="confirm_pw">
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="right">
+            <h2>Log In</h2>
+            <form class = "form" action="/loggingin" method="POST">
+                <div class="field">
+                    <label for="email">Email: </label>
+                    <input type="text" name="email">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password">
+                </div>
+                <br>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

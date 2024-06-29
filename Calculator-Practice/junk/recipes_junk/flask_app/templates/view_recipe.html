@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="head">
+        <h1>Welcome {{session['first_name']}}</h1>
+        <div class="links1">
+            <a href="/dashboard">Back to Recipes</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="main-head">
+            <h2>Recipe Name {{users.recipe_name}}</h2>
+            <div class="creator">
+                <h3>Posted By: {{users.first_name}} {{users.last_name}}</h3>
+            </div>
+        </div>
+        {% for recipe in users.recipes %}
+        <div class="box">
+            <div class="info-head">
+                <p>Description: </p>
+                <p>Under 30 Minutes?: </p>
+                <p>Instructions: </p>
+                <p>Date Made: </p>
+            </div>
+            <div class="info">
+                <p>{{recipe.description}}</p>
+                <p>{{recipe.under_thirty}}</p>
+                <p>{{recipe.instructions}}</p>
+                <p>{{recipe.date_made}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

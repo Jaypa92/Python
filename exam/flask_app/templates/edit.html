@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealz</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>>
+</head>
+<body>
+    <div class="head">
+        <h1>Edit Vehicle Name</h1>
+        <div class="links1">
+            <button><a href="/dashboard">Dashboard</a></button>
+            <button><a href="/logout">Logout</a></button>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="form1">
+            {% for message in get_flashed_messages() %}
+                <p style="color:red">{{message}}</p>
+            {% endfor %}
+            <form action="/editting", method="POST">
+                <div class="field">
+                    <label for="price">Price: </label>
+                    <input type="text" name="price">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="model">Model: </label>
+                    <input type="text" name="model">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="make">Make: </label>
+                    <input type="text" name="make" id="make">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="year">Year: </label>
+                    <input type="text" name="year">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="description">Description: </label>
+                    <textarea name="description" id="" cols="20" rows="10"></textarea>
+                </div>
+                <br>
+                <input type="hidden" name="id" value="{{cars.id}}">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

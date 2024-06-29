@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            margin: 0 auto;
+        }
+        .table{
+            margin-bottom: 20px;
+        }
+        body{
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Users</h1>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in user%}
+                <tr>
+                    <td>{{person.first_name}}</td>
+                    <td>{{person.last_name}}</td>
+                    <td>{{person.email}}</td>
+                    <td>{{person.created_at}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="/create">Add a New User</a>
+</body>
+</html>

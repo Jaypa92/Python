@@ -1,0 +1,4 @@
+SELECT * FROM names
+
+INSERT INTO names(id,name,created_at,updated_at)
+VALUES (1,"Justin",NOW(),NOW()),(2,"Chris",NOW(),NOW()),(3,"Jethro",NOW(),NOW())

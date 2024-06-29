@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealz</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>>
+</head>
+<body>
+    <div class="head">
+        <div class="links2">
+        <button><a href="/welcome">Dashboard</a></button>
+        <button><a href="/logout">Logout</a></button>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="box">
+            <div class="info-head">
+                <p>Price: </p>
+                <p>Model: </p>
+                <p>Make: </p>
+                <p>Year: </p>
+                <p>Description: </p>
+            </div>
+            <div class="info">
+                <p>{{cars.price}}</p>
+                <p>{{cars.model}}</p>
+                <p>{{cars.make}}</p>
+                <p>{{cars.year}}</p>
+                <p>{{cars.description}}</p>
+            </div>
+            <p>Seller: {{cars.user.first_name}} {{cars.user.last_name}}</p>
+            <button><a href="/delete_car/{{cars.id}}">Purchase</a></button>
+        </div>
+    </div>
+</body>
+</html>
