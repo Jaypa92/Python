@@ -1,1 +1,0 @@
-SELECT * FROM dojos LEFT JOIN ninjas ON ninjas.dojo_id = dojos.id WHERE dojo_id = 1;

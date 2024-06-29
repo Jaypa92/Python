@@ -1,5 +1,0 @@
-hw = "hello %s" % "world"
-word = "fuck"
-amount = 3
-ge = "go %s yourself %d times in the ass" % (word, amount)
-print(hw, ge)
