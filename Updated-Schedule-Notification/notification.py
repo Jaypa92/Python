@@ -35,7 +35,7 @@ if __name__ == "__main__":
     directory = os.path.dirname(os.path.abspath(path_to_watch))
     event_handler = Notification_Handler(path_to_watch)
     observer = Observer()
-    observer.schedule(event_handler, os.path.dirname(path_to_watch), recursive=False)
+    observer.schedule(event_handler, directory, recursive=False)
 
     observer.start()
     print("Observer started")
